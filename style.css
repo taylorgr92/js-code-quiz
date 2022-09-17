@@ -1,13 +1,11 @@
-* {
+html,
+body,
+.wrapper {
+  height: 100%;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
 }
 
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -20,21 +18,22 @@
   padding: 30px 40px;
   text-align: center;
 }
-.card-body{
-    justify-content: center;
-    text-align: center;
-    display:block;
-    padding:.5rem;
+.card-body {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: block;
+  padding: 0.2rem;
 }
 .main_title {
-    font-size: 200%;
+  font-size: 200%;
 }
 
 #start_button {
-    display:block;
-    padding: .5rem;
-    font-size:200%;
-}
-#button{
-    font-size:200%;
+  display: block;
+  padding: 0.5rem;
+  font-size: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
 }
