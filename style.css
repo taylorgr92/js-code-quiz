@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+
+
+
+.card{
+    display: flex;
+    max-width: 100%;
+    max-height:auto;
+    margin-left:25%;
+    margin-right:30%;
+    padding-bottom:25%;
+    margin-top: 20vh;
+    background-color: lightblue;
+    border:3px  solid rgb(103, 172, 189);
+    border-radius: 1%; 
+   
+}
+
+span{
+    margin: auto;
+}
