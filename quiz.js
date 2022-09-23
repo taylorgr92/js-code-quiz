@@ -2,32 +2,61 @@
 var timerEl = document.querySelector("#timer");
 
 var buttonEl = document.querySelector("#start_button");
-var h2El= document.querySelector("#question-title");
+var h2El = document.querySelector("#question_title");
+var answer1El= document.querySelector("#answer1");
+var answer2El= document.querySelector("#answer2");
+var answer3El= document.querySelector("#answer3");
 
+var answerCEl= document.querySelector("answer_correct")
 
-var questionsIndex= 0;
+var questionsIndex = 0;
 
+var questions = [
+  {
+    question: "Commonly used datatypes include:",
+    answer1: "booleans",
+    answer2: "strings",
+    answer3: "arrays",
+    answer4: "all of the above",
+    correct: "all of the above",
+  },
+  {
+    question: "Inside which HTML element do we put the JavaScript code?",
+    answer1: "<js>",
+    answer2: "<string>",
+    answer3: "<javascript>",
+    answer4: "<script>",
+    correct: "<script>",
+  },
+  {
+    question: "String values must be enclosed within what notation?",
+    answer1: "brackets",
+    answer2: "quotations",
+    answer3: "parentheses",
+    answer4: "all of the above",
+    correct: "quotations",
+  }
 
-var questions = [{
-  question: 'Why is the sky blue?',
-  answer1: "Magic",
-  answer2:"Science",
-  answer3:"Your Mom",
-  correct: "Magic",
-},
-{
-  question: 'What does the J stand for in Javascript?',
-  answer1: "Coffee",
-  answer2:"Java",
-  answer3:"Your Mom",
-  correct: "Your Mom",
-}
-
-]
-
+  {
+    question: "Commonly used datatypes include:",
+    answer1: "booleans",
+    answer2: "strings",
+    answer3: "arrays",
+    answer4: "all of the above",
+    correct: "all of the above",
+  }
+  {
+    question: "Which method do you use to round a number to the nearest integer?",
+    answer1: "Math.floor()",
+    answer2: "Math.round()",
+    answer3: "Int.round()",
+    answer4: "round()",
+    correct: "all of the above",
+  }
+];
 
 //Putting the timer into a variable
- let startQuiz=function startQuiz() {
+let startQuiz = function startQuiz() {
   var secondsRemain = 60;
 
   console.log(secondsRemain);
@@ -47,15 +76,14 @@ var questions = [{
     }
   }, 1000);
 
-  h2El.textContent= questions[questionsIndex].question
-}
+  h2El.textContent = questions[questionsIndex].question;
 
-
+};
 
 //Put Initials and score into local storage
 
-
 //Event listeners
 
-buttonEl.addEventListener("click",startQuiz);
+buttonEl.addEventListener("click", startQuiz);
+
 
