@@ -14,6 +14,8 @@ body,
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 10% auto;
+  margin-top:4rem;
+
   max-width: 800px;
   padding: 30px 40px;
   text-align: center;
@@ -47,5 +49,5 @@ body,
 }
 
 .button {
-  
+
 }

@@ -1,27 +1,37 @@
 //Selects element by class
-var timerEl = (docuement.querySelector = "timer");
+var timerEl = document.querySelector("#timer");
+
+var buttonEl = document.querySelector("#start_quiz");
 
 //Putting the timer into a variable
-function countdown() {
+ let countdown=function countdown() {
   var secondsRemain = 60;
 
+  console.log(secondsRemain);
+
   var gameInterval = setInterval(function () {
-    
     if (secondsRemain > 1) {
-      timerEl.textContent = secondsRemain + "seconds remaining";
+      timerEl.textContent = secondsRemain + " seconds remaining";
       secondsRemain--;
     } else if (secondsRemain === 1) {
-      timerEl.textContent + "second remaining";
+      timerEl.textContent = secondsRemain + " second remaining";
 
       secondsRemain--;
     } else {
       timerEl.textContent = "";
 
       clearInterval(gameInterval);
-      displayCountdown()
     }
-  }, 6000);
+  }, 1000);
 }
 
+// Function to present question
 
-countdown();
+//
+
+//Put Initials and score into local storage
+
+//Event listeners
+
+buttonEl.addEventListener("click",countdown);
+
