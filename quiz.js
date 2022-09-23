@@ -6,6 +6,8 @@ var h2El = document.querySelector("#question_title");
 var answer1El= document.querySelector("#answer1");
 var answer2El= document.querySelector("#answer2");
 var answer3El= document.querySelector("#answer3");
+var answer4El= document.querySelector("#answer4");
+
 
 var answerCEl= document.querySelector("answer_correct")
 
@@ -35,7 +37,7 @@ var questions = [
     answer3: "parentheses",
     answer4: "all of the above",
     correct: "quotations",
-  }
+  },
 
   {
     question: "Commonly used datatypes include:",
@@ -44,7 +46,7 @@ var questions = [
     answer3: "arrays",
     answer4: "all of the above",
     correct: "all of the above",
-  }
+  },
   {
     question: "Which method do you use to round a number to the nearest integer?",
     answer1: "Math.floor()",
@@ -77,12 +79,14 @@ let startQuiz = function startQuiz() {
   }, 1000);
 
   h2El.textContent = questions[questionsIndex].question;
+  
+  answer1El.innerHTML=questions[questionsIndex].answer1;
+  answer2El.innerHTML=questions[questionsIndex].answer2;
+  answer3El.innerHTML=questions[questionsIndex].answer3;
+  answer4El.innerHTML=questions[questionsIndex].answer4;
+  
 
 };
-
-//Put Initials and score into local storage
-
-//Event listeners
 
 buttonEl.addEventListener("click", startQuiz);
 
