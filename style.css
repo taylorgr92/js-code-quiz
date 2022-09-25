@@ -15,7 +15,6 @@ body,
   font-size: 18px;
   margin: 10% auto;
   margin-top:4rem;
-
   max-width: 800px;
   padding: 30px 40px;
   text-align: center;
@@ -40,13 +39,18 @@ body,
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+  
 }
 
 .question_list{
   display: block;
-  padding:0;
+
+  float:left
+  
 }
 
-.button {
-
+.btn {
+  
+margin: .25rem;
+color:white;
 }

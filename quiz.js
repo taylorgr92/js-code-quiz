@@ -3,13 +3,12 @@ var timerEl = document.querySelector("#timer");
 
 var buttonEl = document.querySelector("#start_button");
 var h2El = document.querySelector("#question_title");
-var answer1El= document.querySelector("#answer1");
-var answer2El= document.querySelector("#answer2");
-var answer3El= document.querySelector("#answer3");
-var answer4El= document.querySelector("#answer4");
-
-
-var answerCEl= document.querySelector("answer_correct")
+var answer1El = document.querySelector("#answer1");
+var answer2El = document.querySelector("#answer2");
+var answer3El = document.querySelector("#answer3");
+var answer4El = document.querySelector("#answer4");
+var pEl= document.querySelector("#response");
+var answerCEl = document.querySelector("answer_correct");
 
 var questionsIndex = 0;
 
@@ -20,7 +19,7 @@ var questions = [
     answer2: "strings",
     answer3: "arrays",
     answer4: "all of the above",
-    correct: "all of the above",
+    correctAnswer: "all of the above",
   },
   {
     question: "Inside which HTML element do we put the JavaScript code?",
@@ -28,7 +27,7 @@ var questions = [
     answer2: "<string>",
     answer3: "<javascript>",
     answer4: "<script>",
-    correct: "<script>",
+    correctAnswer: "<script>",
   },
   {
     question: "String values must be enclosed within what notation?",
@@ -36,25 +35,18 @@ var questions = [
     answer2: "quotations",
     answer3: "parentheses",
     answer4: "all of the above",
-    correct: "quotations",
+    correctAnswer: "quotations",
   },
 
   {
-    question: "Commonly used datatypes include:",
-    answer1: "booleans",
-    answer2: "strings",
-    answer3: "arrays",
-    answer4: "all of the above",
-    correct: "all of the above",
-  },
-  {
-    question: "Which method do you use to round a number to the nearest integer?",
+    question:
+      "Which method do you use to round a number to the nearest integer?",
     answer1: "Math.floor()",
     answer2: "Math.round()",
     answer3: "Int.round()",
     answer4: "round()",
-    correct: "all of the above",
-  }
+    correctAnswer: "Math.floor()",
+  },
 ];
 
 //Putting the timer into a variable
@@ -79,15 +71,71 @@ let startQuiz = function startQuiz() {
   }, 1000);
 
   h2El.textContent = questions[questionsIndex].question;
-  
-  answer1El.innerHTML=questions[questionsIndex].answer1;
-  answer2El.innerHTML=questions[questionsIndex].answer2;
-  answer3El.innerHTML=questions[questionsIndex].answer3;
-  answer4El.innerHTML=questions[questionsIndex].answer4;
-  
 
+  answer1El.innerHTML = questions[questionsIndex].answer1;
+  answer2El.innerHTML = questions[questionsIndex].answer2;
+  answer3El.innerHTML = questions[questionsIndex].answer3;
+  answer4El.innerHTML = questions[questionsIndex].answer4;
+
+
+
+  answer1El.addEventListener("click", function () {
+ 
+    if (
+      questions[questionsIndex].answer1 === questions[questionsIndex].correct
+    ) {
+
+      return pEl.textContent= "Correct"
+      
+    } else {
+      return pEl.textContent= "Wrong!"
+    }
+  });
 };
 
+
+answer2El.addEventListener("click", function () {
+ 
+  if (
+    questions[questionsIndex].answer2 === questions[questionsIndex].correctAnswer
+  ) {
+
+    return pEl.textContent= "Correct"
+    
+  } else {
+    return pEl.textContent= "Wrong!"
+  }
+});
+
+
+answer3El.addEventListener("click", function () {
+ 
+  if (
+    questions[questionsIndex].answer3 === questions[questionsIndex].correctAnswer
+  ) {
+
+    return pEl.textContent= "Correct"
+    
+  } else {
+    return pEl.textContent= "Wrong!"
+  }
+});
+
+
+answer4El.addEventListener("click", function () {
+ 
+  if (
+    questions[questionsIndex].answer4 === questions[questionsIndex].correctAnswer
+  ) {
+
+    return pEl.textContent= "Correct!"
+    
+  } else {
+    return pEl.textContent= "Wrong!"
+  }
+});
+
+
+
+
 buttonEl.addEventListener("click", startQuiz);
-
-
