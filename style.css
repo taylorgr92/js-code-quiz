@@ -1,5 +1,7 @@
+/*Setting variables*/
 :root {
-  --white: white;
+  --white: rgba(255, 255, 255, 0.966);
+  --yellow: #ffffb3;
 }
 
 html,
@@ -11,7 +13,6 @@ body,
 }
 
 .card {
-  color: var(--white);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -23,6 +24,7 @@ body,
   padding: 30px 40px;
   text-align: center;
   padding-bottom: 10rem;
+  background-color:var(--yellow)
 }
 .card-body {
   justify-content: center;
@@ -34,29 +36,39 @@ body,
 .main_title {
   margin-top: 4rem;
   margin-bottom: 1rem;
-  font-size: 200%;
+  font-size: 275%;
   font-family: "Lobster", cursive;
 }
 
 /* Quiz start button styling */
 .start_quiz {
-  font-size: 100%;
+  
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+ 
 }
 
 #question_list {
   display: block;
-  color: var(--white);
+
   float: left;
+  margin:.25rem;
+  font-size: 150%;
+  font-family: 'Roboto', sans-serif;
 }
 #question_title {
   margin-top: 1rem;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom:1rem;
 }
 
 #start_button {
-  font-size: 100%;
+  font-size: 125%;
   margin: 0.25rem;
   color: var(--white);
+}
+
+.answer-button{
+  color: white;
 }
